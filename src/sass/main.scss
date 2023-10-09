@@ -1,73 +1,129 @@
 @use "./colors" as *;
-*{
-box-sizing: border-box;
- margin: 0;
- padding: 0;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
-html{
-    font-size: 62.5%;
+html {
+	font-size: 62.5%;
 	scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+	scroll-padding-top: 5rem;
 }
-.desktop-nav{
+body {
+	font-family: "Montserrat", sans-serif;
+	font-family: "Roboto", sans-serif;
+}
+.desktop-nav {
+	display: none;
+}
+.mobile-nav {
+	position: relative;
+	height: 5rem;
+	width: 45%;
+	background-color: $red;
+	z-index: 10;
+	&::before {
+		position: absolute;
+		top: -3.5rem;
+		right: -3.5rem;
+		width: 7rem;
+		height: 7rem;
+		transform: rotate(45deg);
+		background-color: $red;
+		content: "";
+		z-index: -1;
+	}
+	&__brand {
+		width: 4rem;
+		height: 4rem;
+		line-height: 5rem;
+		&-img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__btn {
+		position: absolute;
+		top: 0.8rem;
+		right: -110%;
+		width: 4rem;
+		height: 4rem;
+		border: none;
+		background: none;
+		transition: transform 0.3s;
+		cursor: pointer;
+		&:hover {
+			transform: scale(0.95);
+		}
+
+		&-img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__close-btn {
+		display: none;
+		position: absolute;
+		top: 0.8rem;
+		right: -110%;
+		width: 4rem;
+		height: 4rem;
+		border: none;
+		background: none;
+		opacity: 0;
+		transition: opacity .3s;
+
+		&-img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__links {
+        position: relative;
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+        left: -101%;
+		align-items: center;
+		background-color: $red;
+        transition: left .4s;
+	}
+	&__link {
+		padding: 1.5rem 0;
+		font-size: 1.8rem;
+		color: $light;
+		text-decoration: none;
+        
+        
+	}
+	&__bg{
+		position: fixed;
+		left: -101%;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0, .8);
+		opacity: 0;
+		transition: opacity .2s;
+	}
+}
+.active{
+    display: flex;
+}
+.active-btn{
+    display: block;
+}
+.hide{
     display: none;
 }
-.mobile-nav{
-    position: relative;
-    height: 5rem;
-    width: 45%;
-    background-color: $red;
-    z-index: 10;
-    &::before{
-position: absolute;
-top: -3.5rem;
-right: -3.5rem;
-width: 7rem;
-height: 7rem;
-transform: rotate(45deg);
-background-color: $red;
-content: '';
-z-index: -1;
-
-
+.opacity{
+	opacity: 1;
+}
+.slide{
+left: 0;
+}
+@keyframes slide {
+    to{
+        left: 0;
     }
-    &__brand{
-        width: 4rem;
-        height: 4rem;
-        line-height: 5rem;
-        &-img{
-           width: 100%;
-           height: 100%;
-        }
-    }
-    &__btn{
-        position: absolute;
-        top: .8rem;
-        right: -80%;
-        width: 4rem;
-        height: 4rem;
-        border:none;
-        background: none;
-
-        &-img{
-            width: 100%;
-            height: 100%;
-        }
-
-    }
-    &__close-btn{
-        display: none;
-        position: absolute;
-        top: .8rem;
-        right: -80%;
-        width: 4rem;
-        height: 4rem;
-        border:none;
-        background: none;
-        &-img{
-            width: 100%;
-            height: 100%;
-        }
-    }
-   
+    
 }

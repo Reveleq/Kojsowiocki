@@ -12,16 +12,52 @@ html {
 body {
 	font-family: "Montserrat", sans-serif;
 	font-family: "Roboto", sans-serif;
+    background-color: $light;
 }
 .desktop-nav {
+    position: relative;
 	display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8rem;
+    width: 50%;
+    z-index: 20;
+
+    background-color: $red;
+    &::before{
+        position: absolute;
+		top: -5.5rem;
+		right: -5.5rem;
+		width: 11rem;
+		height: 11rem;
+		transform: rotate(45deg);
+		background-color: $red;
+		content: "";
+		z-index: 10;
+    }
+    &__link{
+        line-height: 7rem;
+        font-size: 2rem;
+        text-decoration: none;
+    color: $light;
+    transition: color .3s;
+    &:hover{
+
+        color: $dark;
+    }
+    }
+    &__brand{
+    width: 4rem;
+    height: 4rem;
+    }
+    
 }
 .mobile-nav {
 	position: relative;
 	height: 5rem;
 	width: 45%;
 	background-color: $red;
-	z-index: 10;
+	z-index: 1;
 	&::before {
 		position: absolute;
 		top: -3.5rem;
@@ -31,13 +67,15 @@ body {
 		transform: rotate(45deg);
 		background-color: $red;
 		content: "";
-		z-index: -1;
+		z-index: 10;
 	}
 	&__brand {
+       
 		width: 4rem;
 		height: 4rem;
 		line-height: 5rem;
 		&-img {
+            margin: 1rem;
 			width: 100%;
 			height: 100%;
 		}
@@ -89,25 +127,226 @@ body {
         transition: left .4s;
 	}
 	&__link {
-		padding: 1.5rem 0;
-		font-size: 1.8rem;
+		padding: 1.5rem 3rem;
+		font-size: 1.6rem;
 		color: $light;
 		text-decoration: none;
+        transition: color .3s;
         
-        
+        &:hover{
+            color: $dark;
+        }
 	}
 	&__bg{
+        display: none;
 		position: fixed;
-		left: -101%;
-		width: 100%;
-		height: 100%;
+		top: 0;
+	    left: 0;
+        width: 100%;
+        height: 100%;
 		background-color: rgba(0,0,0, .8);
 		opacity: 0;
-		transition: opacity .2s;
+		transition: opacity .3s;
+        z-index: -1;
 	}
+}
+.header{
+    &-hero{
+        &__img{
+            position: relative;
+            top: -8rem;
+            height: 60rem;
+            background-image: url('/dist/img/header.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+        &__bg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(157, 59, 59, 0.5);
+            z-index: -5;
+        }
+    }
+}
+.header-section{
+    position: relative;
+    top: -15rem;
+    background-color: $red;
+    width: 45%;
+    height: 5rem;
+    &::before {
+		position: absolute;
+		top: 1.5rem;
+		right: -3.5rem;
+		width: 7rem;
+		height: 7rem;
+		transform: rotate(45deg);
+		background-color: $red;
+		content: "";
+		z-index: 0;
+	}
+}
+.about-us{
+    position: relative;
+    top: -15rem;
+    padding-bottom: 3em;
+    background-color: $red;
+    z-index: 10;
+    &__header{
+        color: $light;
+    }
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1em;
+        margin: 0 auto ;
+        width: 90%;
+        background-color: $light;
+        border-radius: 5px;
+        box-shadow: 6px 6px 3px 0px rgb(0, 0, 0);
+
+    }
+    &__img{
+        display: block;
+        margin: 0 auto ;
+        padding: 2.5rem 0 2rem;
+        width: 21rem;
+    }
+    &__text{
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 1em;
+        font-size: 1.6rem;
+        width: 21rem;   
+    }
+
+
+}
+.history{
+    position: relative;
+   top: -15rem;
+    &__header{
+        position: relative;
+        color: $dark;
+    }
+    &__box{
+        position: relative;
+        margin: 0 auto ;
+        padding-bottom: 1em;
+        width: 90%;
+        background-color: $red;
+        border-radius: 5px;
+        box-shadow: 6px 6px 3px 0px rgb(0, 0, 0);
+
+    }
+    &__text{
+        display: block;
+        margin: 0 auto;
+       padding: 1em 0;
+        width: 21rem; 
+        color: $light;    
+        font-size: 1.6rem;
+    }
+    &__timeline{
+        position: relative;
+        margin: 5em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        &-line{
+            display: block;
+            width: .5rem;
+            height: 30rem;
+            background-color: $red;
+        }
+        &-header{
+            font-size: 1.8rem;
+        }
+        &-text{
+            position: absolute;
+            display: block;
+            font-size: 1.8rem;
+            color: $red;
+            
+        }
+    }
+}
+
+.timeline{
+    
+    &-first{
+
+        margin-left: 5em;
+        top: 1em;
+
+
+    }
+    &-second{
+
+        margin-right: 5em;
+        top: 4em;
+
+
+    }
+    &-third{
+
+        margin-left: 5em;
+        top: 7em;
+
+
+    }
+    &-fourth{
+
+        margin-right: 5em;
+        top: 10em;
+    }
+    &-fifth{
+
+        margin-left: 5em;
+        top: 13em;
+
+
+    }
+}
+
+.news{
+    position: relative;
+    top: -15rem;
+    background-color: $red;
+    &__header{
+        color: $light;
+    }
+    &__cards{
+        display: flex;
+        flex-direction:column;
+    }
+    &__card{
+        width: 20rem;
+        height: 30rem;
+        background-color: $light;
+        border-radius: 5px;
+        &-header{
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+    
+    }
+}
+.header{
+    padding: 2rem 0;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: normal;
 }
 .active{
     display: flex;
+    
 }
 .active-btn{
     display: block;
@@ -121,9 +360,74 @@ body {
 .slide{
 left: 0;
 }
-@keyframes slide {
-    to{
-        left: 0;
+.second-header{
+    top: -15.5rem;
+    &::before{
+        top: -3.5rem;
     }
-    
+}
+@media(min-width:375px){
+    .about-us{
+        &__box{
+            width: 27rem;
+        }
+    }
+    .history{
+        &__box{
+            width: 27rem;
+        }
+    }
+
+}
+@media (min-width: 768px) {
+    .mobile-nav{
+        &__btn{
+            right: -115%;
+        }
+        &__close-btn{
+            right: -115%;
+        }
+    }
+    .about-us{
+       
+        &__box{
+        flex-direction: row;
+        height: 30rem;
+        width: 60rem;
+        }
+       
+        &__img{
+            height: 25rem;
+            width: 26rem;
+        }
+        &__text{
+            font-size: 1.8rem;
+        }
+
+    }
+    .header{
+        font-size: 3rem;
+    }
+    .history{
+        &__box{
+            width: 50rem;
+
+            } 
+            &__text{
+                width: 40rem;
+            }
+           
+            
+            
+        }
+        
+            
+}
+@media(min-width: 992px) {
+    .mobile-nav{
+        display: none;
+    }
+    .desktop-nav{
+        display: flex;
+    }
 }

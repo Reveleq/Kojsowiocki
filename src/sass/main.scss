@@ -12,20 +12,20 @@ html {
 body {
 	font-family: "Montserrat", sans-serif;
 	font-family: "Roboto", sans-serif;
-    background-color: $light;
+	background-color: $light;
 }
 .desktop-nav {
-    position: relative;
+	position: relative;
 	display: none;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 8rem;
-    width: 50%;
-    z-index: 20;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 8rem;
+	width: 50%;
+	z-index: 20;
 
-    background-color: $red;
-    &::before{
-        position: absolute;
+	background-color: $red;
+	&::before {
+		position: absolute;
 		top: -5.5rem;
 		right: -5.5rem;
 		width: 11rem;
@@ -34,23 +34,21 @@ body {
 		background-color: $red;
 		content: "";
 		z-index: 10;
-    }
-    &__link{
-        line-height: 7rem;
-        font-size: 2rem;
-        text-decoration: none;
-    color: $light;
-    transition: color .3s;
-    &:hover{
-
-        color: $dark;
-    }
-    }
-    &__brand{
-    width: 4rem;
-    height: 4rem;
-    }
-    
+	}
+	&__link {
+		line-height: 7rem;
+		font-size: 2rem;
+		text-decoration: none;
+		color: $light;
+		transition: color 0.3s;
+		&:hover {
+			color: $dark;
+		}
+	}
+	&__brand {
+		width: 4rem;
+		height: 4rem;
+	}
 }
 .mobile-nav {
 	position: relative;
@@ -70,12 +68,11 @@ body {
 		z-index: 10;
 	}
 	&__brand {
-       
 		width: 4rem;
 		height: 4rem;
 		line-height: 5rem;
 		&-img {
-            margin: 1rem;
+			margin: 1rem;
 			width: 100%;
 			height: 100%;
 		}
@@ -109,7 +106,7 @@ body {
 		border: none;
 		background: none;
 		opacity: 0;
-		transition: opacity .3s;
+		transition: opacity 0.3s;
 
 		&-img {
 			width: 100%;
@@ -117,66 +114,66 @@ body {
 		}
 	}
 	&__links {
-        position: relative;
+		position: relative;
 		display: none;
 		flex-direction: column;
 		justify-content: center;
-        left: -101%;
+		left: -101%;
 		align-items: center;
 		background-color: $red;
-        transition: left .4s;
+		transition: left 0.4s;
 	}
 	&__link {
 		padding: 1.5rem 3rem;
 		font-size: 1.6rem;
 		color: $light;
 		text-decoration: none;
-        transition: color .3s;
-        
-        &:hover{
-            color: $dark;
-        }
+		transition: color 0.3s;
+
+		&:hover {
+			color: $dark;
+		}
 	}
-	&__bg{
-        display: none;
+	&__bg {
+		display: none;
 		position: fixed;
 		top: 0;
-	    left: 0;
-        width: 100%;
-        height: 100%;
-		background-color: rgba(0,0,0, .8);
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
 		opacity: 0;
-		transition: opacity .3s;
-        z-index: -1;
+		transition: opacity 0.3s;
+		z-index: -1;
 	}
 }
-.header{
-    &-hero{
-        &__img{
-            position: relative;
-            top: -8rem;
-            height: 60rem;
-            background-image: url('/dist/img/header.jpg');
-            background-size: cover;
-            background-position: center;
-            z-index: 0;
-        }
-        &__bg{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(157, 59, 59, 0.5);
-            z-index: -5;
-        }
-    }
+.header {
+	&-hero {
+		&__img {
+			position: relative;
+			top: -8rem;
+			height: 60rem;
+			background-image: url("/dist/img/header.jpg");
+			background-size: cover;
+			background-position: center;
+			z-index: 0;
+		}
+		&__bg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(157, 59, 59, 0.5);
+			z-index: -5;
+		}
+	}
 }
-.header-section{
-    position: relative;
-    top: -15rem;
-    background-color: $red;
-    width: 45%;
-    height: 5rem;
-    &::before {
+.header-section {
+	position: relative;
+	top: -15rem;
+	background-color: $red;
+	width: 45%;
+	height: 5rem;
+	&::before {
 		position: absolute;
 		top: 1.5rem;
 		right: -3.5rem;
@@ -188,246 +185,414 @@ body {
 		z-index: 0;
 	}
 }
-.about-us{
-    position: relative;
-    top: -15rem;
-    padding-bottom: 3em;
-    background-color: $red;
-    z-index: 10;
-    &__header{
-        color: $light;
-    }
-    &__box{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 1em;
-        margin: 0 auto ;
-        width: 90%;
-        background-color: $light;
-        border-radius: 5px;
-        box-shadow: 6px 6px 3px 0px rgb(0, 0, 0);
-
-    }
-    &__img{
-        display: block;
-        margin: 0 auto ;
-        padding: 2.5rem 0 2rem;
-        width: 21rem;
-    }
-    &__text{
-        display: block;
-        margin: 0 auto;
-        padding-bottom: 1em;
-        font-size: 1.6rem;
-        width: 21rem;   
-    }
-
-
+.about-us {
+	position: relative;
+	top: -15rem;
+	padding-bottom: 3em;
+	background-color: $red;
+	z-index: 10;
+	&__header {
+		color: $light;
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 1em;
+		margin: 0 auto;
+		width: 90%;
+		background-color: $light;
+		border-radius: 5px;
+		box-shadow: 6px 6px 3px 0px rgb(0, 0, 0);
+	}
+	&__img {
+		display: block;
+		margin: 0 auto;
+		padding: 2.5rem 0 2rem;
+		width: 21rem;
+	}
+	&__text {
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 1em;
+		font-size: 1.6rem;
+		width: 21rem;
+	}
 }
-.history{
-    position: relative;
-   top: -15rem;
-    &__header{
-        position: relative;
-        color: $dark;
-    }
-    &__box{
-        position: relative;
-        margin: 0 auto ;
-        padding-bottom: 1em;
-        width: 90%;
-        background-color: $red;
-        border-radius: 5px;
-        box-shadow: 6px 6px 3px 0px rgb(0, 0, 0);
+.history {
+	position: relative;
+	top: -15rem;
+	&__header {
+		position: relative;
+		color: $dark;
+	}
+	&__box {
+		position: relative;
+		margin: 0 auto;
+		padding-bottom: 1em;
+		width: 90%;
+		background-color: $red;
+		border-radius: 5px;
+		box-shadow: 6px 6px 3px 0px rgb(0, 0, 0);
+	}
+	&__text {
+		display: block;
+		margin: 0 auto;
+		padding: 1em 0;
+		width: 21rem;
+		color: $light;
+		font-size: 1.6rem;
+	}
+	&__timeline {
+		position: relative;
+		margin: 5em 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
-    }
-    &__text{
-        display: block;
-        margin: 0 auto;
-       padding: 1em 0;
-        width: 21rem; 
-        color: $light;    
-        font-size: 1.6rem;
-    }
-    &__timeline{
-        position: relative;
-        margin: 5em 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-        &-line{
-            display: block;
-            width: .5rem;
-            height: 30rem;
-            background-color: $red;
-        }
-        &-header{
-            font-size: 1.8rem;
-        }
-        &-text{
-            position: absolute;
-            display: block;
-            font-size: 1.8rem;
-            color: $red;
-            
-        }
-    }
+		&-line {
+			display: block;
+			width: 0.5rem;
+			height: 30rem;
+			background-color: $red;
+		}
+		&-header {
+			font-size: 1.8rem;
+		}
+		&-text {
+			position: absolute;
+			display: block;
+			font-size: 1.8rem;
+			color: $red;
+		}
+	}
 }
 
-.timeline{
-    
-    &-first{
-
-        margin-left: 5em;
-        top: 1em;
-
-
-    }
-    &-second{
-
-        margin-right: 5em;
-        top: 4em;
-
-
-    }
-    &-third{
-
-        margin-left: 5em;
-        top: 7em;
-
-
-    }
-    &-fourth{
-
-        margin-right: 5em;
-        top: 10em;
-    }
-    &-fifth{
-
-        margin-left: 5em;
-        top: 13em;
-
-
-    }
+.timeline {
+	&-first {
+		margin-left: 5em;
+		top: 1em;
+	}
+	&-second {
+		margin-right: 5em;
+		top: 4em;
+	}
+	&-third {
+		margin-left: 5em;
+		top: 7em;
+	}
+	&-fourth {
+		margin-right: 5em;
+		top: 10em;
+	}
+	&-fifth {
+		margin-left: 5em;
+		top: 13em;
+	}
 }
 
-.news{
-    position: relative;
-    top: -15rem;
-    background-color: $red;
-    &__header{
-        color: $light;
-    }
-    &__cards{
-        display: flex;
-        flex-direction:column;
-    }
-    &__card{
-        width: 20rem;
-        height: 30rem;
-        background-color: $light;
-        border-radius: 5px;
-        &-header{
-            font-size: 2.5rem;
-            font-weight: 300;
-        }
-    
-    }
+.news {
+	position: relative;
+	top: -15rem;
+	padding-bottom: 4em;
+	background-color: $red;
+	&__header {
+		color: $light;
+	}
+
+	&__card {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		background-color: $light;
+		border-radius: 5px;
+		box-shadow: 6px 6px 3px 0px rgb(0, 0, 0);
+
+		&-header {
+			padding-bottom: 0.5em;
+			text-align: center;
+			font-size: 2.5rem;
+			font-weight: normal;
+		}
+		&-img {
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			width: 80%;
+			padding-bottom: 1em;
+		}
+		&-text {
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			padding: 0.5rem 0 1em;
+			width: 80%;
+			font-size: 1.6rem;
+			font-weight: 200;
+			text-align: justify;
+		}
+		&-link {
+			position: relative;
+			display: block;
+			margin: 0 auto 1em;
+			height: 4rem;
+			width: 30%;
+			text-align: center;
+			font-size: 2rem;
+			line-height: 4rem;
+			text-decoration: none;
+			color: $light;
+			background-color: $dark-red;
+			transition: background-color 0.3s;
+			&:hover {
+				background-color: $red;
+			}
+		}
+	}
+	&__more-btn{
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		height: 4rem;
+		width: 70%;
+		color: $light;
+		text-decoration: none;
+		font-size: 1.8rem;
+		text-align: center;
+		line-height: 4rem;
+		border-radius: 5px;
+		background-color: $dark-red;
+		transition: color .3s;
+		overflow: hidden;
+	&::before{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		bottom: -100%;
+		border-radius: 5px;
+		background-color: $light;
+		content: 'Wszyskie aktualności';
+		transition: bottom .3s;
+		z-index: 0;
+	}
+	&:hover{
+		color: $dark;
+		&::before{
+			bottom: 0;
+		}
+	}
+	}
 }
-.header{
-    padding: 2rem 0;
-    font-size: 2.5rem;
-    text-align: center;
-    font-weight: normal;
+.contact{
+	position: relative;
+	top: -15rem;
+	&__box{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		margin: 0 auto;
+		height: 20rem;
+		width: 80%;
+		max-width: 70rem;
+		background-color: $red;
+		border-radius: 5px;
+		box-shadow: 6px 6px 3px 0px rgb(0, 0, 0);
+	}
+	&__center-box{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+  &__paragraph{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 0;
+	
+&-text{
+	margin-left: 1rem;
+	color: $light;
+	font-size: 1.6rem;
 }
-.active{
-    display: flex;
-    
+  }
+	
+
 }
-.active-btn{
-    display: block;
+.footer{
+	background-color: $dark-red;
+	&__box{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	&__brand{
+			&-header{
+				color: $light;
+			}
+		}
+		&__list{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			&-link{
+				padding: .5rem;
+				color: $light;
+				font-size: 1.6rem;
+				text-decoration: none;
+			}
+		}
+		&__down{
+			margin-top: 1em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-top: 1px solid $light;
+			&-links{
+				padding-top: 1em;
+			}
+			&-year{
+				margin-top: 1em;
+				&-text{
+					color: $light;
+				
+				}
+				&-span{
+					color: $light;
+				}
+				
+			}
+			&-producent{
+				margin-top: 1em;
+				&-text{
+					color: $light;
+				}
+			}
+		}
 }
-.hide{
-    display: none;
+
+.header {
+	padding: 2rem 0;
+	font-size: 2.5rem;
+	text-align: center;
+	font-weight: normal;
 }
-.opacity{
+.active {
+	display: flex;
+}
+.active-btn {
+	display: block;
+}
+.hide {
+	display: none;
+}
+.opacity {
 	opacity: 1;
 }
-.slide{
-left: 0;
+.slide {
+	left: 0;
 }
-.second-header{
-    top: -15.5rem;
-    &::before{
-        top: -3.5rem;
-    }
+.second-header {
+	top: -15.5rem;
+	&::before {
+		top: -3.5rem;
+		z-index: -1;
+	}
 }
-@media(min-width:375px){
-    .about-us{
-        &__box{
-            width: 27rem;
-        }
-    }
-    .history{
-        &__box{
-            width: 27rem;
-        }
-    }
-
+.third-header{
+	top: 0;
+	background-color: $dark-red;
+	&::before{
+		background-color: $dark-red;
+		z-index: -1;
+	}
+}
+@media (min-width: 375px) {
+	.about-us {
+		&__box {
+			width: 27rem;
+		}
+	}
+	.history {
+		&__box {
+			width: 27rem;
+		}
+	}
 }
 @media (min-width: 768px) {
-    .mobile-nav{
-        &__btn{
-            right: -115%;
-        }
-        &__close-btn{
-            right: -115%;
-        }
-    }
-    .about-us{
-       
-        &__box{
-        flex-direction: row;
-        height: 30rem;
-        width: 60rem;
-        }
-       
-        &__img{
-            height: 25rem;
-            width: 26rem;
-        }
-        &__text{
-            font-size: 1.8rem;
-        }
+	.mobile-nav {
+		&__btn {
+			right: -115%;
+		}
+		&__close-btn {
+			right: -115%;
+		}
+	}
+	.about-us {
+		&__box {
+			flex-direction: row;
+			height: 30rem;
+			width: 60rem;
+		}
 
-    }
-    .header{
-        font-size: 3rem;
-    }
-    .history{
-        &__box{
-            width: 50rem;
-
-            } 
-            &__text{
-                width: 40rem;
-            }
-           
-            
-            
-        }
-        
-            
+		&__img {
+			height: 25rem;
+			width: 26rem;
+		}
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+	.header {
+		font-size: 3rem;
+	}
+	.history {
+		&__box {
+			width: 50rem;
+		}
+		&__text {
+			width: 40rem;
+		}
+	}
+	.news{
+		&__card{
+			margin: 4rem;
+		}
+	}
+	.contact{
+		&__paragraph{
+			&-text{
+font-size: 2rem;
+			}
+		}
+	}
 }
-@media(min-width: 992px) {
-    .mobile-nav{
-        display: none;
-    }
-    .desktop-nav{
-        display: flex;
-    }
+@media (min-width: 992px) {
+	.mobile-nav {
+		display: none;
+	}
+	.desktop-nav {
+		display: flex;
+	}
+	.news{
+		&__card{
+			margin: 5rem;
+		}
+	}
+}
+@media(min-width: 1100px){
+	.news{
+		&__card{
+			margin: 6rem;
+		}
+	}
 }

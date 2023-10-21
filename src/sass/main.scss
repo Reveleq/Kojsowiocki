@@ -107,10 +107,13 @@ body {
 		background: none;
 		opacity: 0;
 		transition: opacity 0.3s;
+		z-index: 5;
+		cursor: pointer;
 
 		&-img {
 			width: 100%;
 			height: 100%;
+			z-index: 5;
 		}
 	}
 	&__links {
@@ -122,6 +125,7 @@ body {
 		align-items: center;
 		background-color: $red;
 		transition: left 0.4s;
+		z-index: -5;
 	}
 	&__link {
 		padding: 1.5rem 3rem;
@@ -133,18 +137,6 @@ body {
 		&:hover {
 			color: $dark;
 		}
-	}
-	&__bg {
-		display: none;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.8);
-		opacity: 0;
-		transition: opacity 0.3s;
-		z-index: -1;
 	}
 }
 .header {
@@ -158,12 +150,28 @@ body {
 			background-position: center;
 			z-index: 0;
 		}
+		&__text{
+			position: relative;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&-img{
+				height: 1.5em;
+				margin-right: 0.5em;
+			}
+			&-header{
+				font-weight: 300;
+				color: $light;
+			}
+		}
 		&__bg {
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			background-color: rgba(157, 59, 59, 0.5);
 			z-index: -5;
+			transition: background-color .3s;
 		}
 	}
 }
@@ -338,7 +346,7 @@ body {
 			display: block;
 			margin: 0 auto 1em;
 			height: 4rem;
-			width: 30%;
+			width: 50%;
 			text-align: center;
 			font-size: 2rem;
 			line-height: 4rem;
@@ -420,6 +428,9 @@ body {
 	color: $light;
 	font-size: 1.6rem;
 }
+&-icon{
+	margin-left: 1em;
+}
   }
 	
 
@@ -434,6 +445,15 @@ body {
 		
 	}
 	&__brand{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+			&-logo{
+				margin-right: 1em;
+				height: 3.5rem;
+	
+
+			}
 			&-header{
 				color: $light;
 			}
@@ -448,8 +468,13 @@ body {
 				color: $light;
 				font-size: 1.6rem;
 				text-decoration: none;
+				transition: color .3s;
+				&:hover{
+					color: $dark;
+				}
 			}
 		}
+
 		&__down{
 			margin-top: 1em;
 			display: flex;
@@ -457,8 +482,23 @@ body {
 			justify-content: center;
 			align-items: center;
 			border-top: 1px solid $light;
+			
 			&-links{
 				padding-top: 1em;
+				&-img{
+					:hover{
+						transform: scale(.90);
+					}
+				}
+				
+			}
+			&-link{
+				:hover{
+					.footer__down-link-img{
+						content:url("/dist/img/facebook-dark.svg");
+
+					}
+				}
 			}
 			&-year{
 				margin-top: 1em;
@@ -472,12 +512,54 @@ body {
 				
 			}
 			&-producent{
+				display: flex;
+				flex-direction: column;
 				margin-top: 1em;
 				&-text{
 					color: $light;
 				}
+				&-logo{
+					display: block;
+					margin: 1em auto;
+					height: 3rem;
+				}
 			}
 		}
+}
+.scroll-up{
+	position: fixed;
+	display: none;
+	bottom: 3%;
+	right: -103%;
+	height: 6rem;
+	width: 6rem;
+	background-color: $dark-red;
+	border: 1px solid $dark;
+	border-radius: 50%;
+	opacity: 1;
+	z-index: 20;
+	transition: background-color .3s, transform .3s, right .3s;
+&:hover{
+	background-color: $light;
+}
+	&__link{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+width: 6rem;
+height: 6rem;
+
+	}
+	&__icon{
+		width: 5rem;
+		height: 5rem;
+		transition: background-color .3s;
+		&:hover{
+			content:url("/dist/img/arrow-up-dark.svg");
+
+		}
+
+	}
 }
 
 .header {
@@ -495,12 +577,40 @@ body {
 .hide {
 	display: none;
 }
-.opacity {
+.opacity{
 	opacity: 1;
+}
+.right {
+right: 3%;
 }
 .slide {
 	left: 0;
 }
+.rotate{
+	transform: rotate(180deg);
+}
+.dark{
+	background-color: rgba(0, 0, 0, .80);
+}
+.animate-opacity{
+	animation: opacityShow .3s forwards;
+}
+.animate-opacity-hide{
+	animation: opacityHide .3s forwards;
+}
+@keyframes opacityShow{
+	to{
+		display: block;
+		opacity: 1;
+	}
+}
+@keyframes opacity-hide{
+	to{
+		display: none;
+		opacity: 0;
+	}
+}
+
 .second-header {
 	top: -15.5rem;
 	&::before {
@@ -529,6 +639,18 @@ body {
 	}
 }
 @media (min-width: 768px) {
+	.header{
+		&-hero{
+			&__text{
+				&-header{
+					font-size: 2.5em;
+				}
+				&-img{
+					height: 2.5em;
+				}
+			}
+		}
+	}
 	.mobile-nav {
 		&__btn {
 			right: -115%;
@@ -573,6 +695,44 @@ body {
 			&-text{
 font-size: 2rem;
 			}
+			
+		}
+	}
+	.footer{
+		&__box{
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+		&__brand{
+			&-header{
+				font-size: 3.5rem;
+			}
+			
+		}
+		&__list{
+			padding: 1.5em 0;
+			align-items: flex-start;
+			&-link{
+				font-size: 1.8rem;
+			}
+		}
+		&__down{
+			flex-direction: row;
+			justify-content: space-around;
+			&-producent{
+				flex-direction: row;
+				justify-content: space-evenly;
+				align-items: center;
+	 &-text{
+		padding-right: .5em;
+		font-size: 1.6rem;
+	 }
+			}
+			&-year{
+				&-text{
+					font-size: 1.6rem;
+				}
+			}
 		}
 	}
 }
@@ -583,10 +743,27 @@ font-size: 2rem;
 	.desktop-nav {
 		display: flex;
 	}
+	.header{
+		&-hero{
+			&__img{
+				top: -10rem;
+			}
+		}
+	}
+	.about-us{
+		top: -17rem;
+	}
 	.news{
+		top: -17rem;
 		&__card{
 			margin: 5rem;
 		}
+	}
+	.header-section{
+		top: -17rem;
+	}
+	.third-header{
+		top: 0;
 	}
 }
 @media(min-width: 1100px){

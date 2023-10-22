@@ -5,14 +5,18 @@ const mobileNavLink = document.querySelectorAll('.mobile-nav__link')
 const heroBg = document.querySelector('.header-hero__bg')
 const yearSpan = document.querySelector('.footer__down-year-span')
 const scrollbtn = document.querySelector('.scroll-up')
+const scrollLink = document.querySelector('.scroll-up__link')
+const closebtnIcon = document.querySelector('.mobile-nav__close-btn-img')
+const burgerBtnIcon = document.querySelector('.mobile-nav__btn-img')
 const year = new Date().getFullYear()
 yearSpan.textContent = year
 window.addEventListener('scroll', () => {
-    if( window.scrollY > 300){
+    if( document.body.scrollTop > 350 || document.documentElement.scrollTop > 300){
 scrollbtn.classList.add('active-btn')
 setTimeout( () => {
     scrollbtn.classList.add('right')
-}, 100)
+}, 1)
+
 
     }else{
         scrollbtn.classList.remove('right')
@@ -25,16 +29,13 @@ setTimeout( () => {
     }
 })
 const showLinks = () => {
-    heroBg.classList.add('dark')
-	mobileNavLinks.classList.add("active");
-	closeBtn.classList.add("active-btn");
-	burgerBtn.classList.remove("active-btn");
-	burgerBtn.classList.add("hide");
+    heroBg.classList.toggle('dark')
+	mobileNavLinks.classList.toggle("opacity");
+	burgerBtnIcon.classList.toggle("hide");
+	closebtnIcon.classList.toggle("active-btn");
     setTimeout( () => {
-        mobileNavLinks.classList.add("slide")}, 1)
-    closeBtn.classList.add('opacity')
-
-	
+        mobileNavLinks.classList.toggle("slide")}, 1)
+    // closeBtn.classList.add('opacity')	
 	// setTimeout(() => mobileNavLinks.classList.remove(slide), 400);
 };
 const hideLinks = () => {
@@ -57,4 +58,7 @@ scrollbtn.classList.remove('rotate')
     }, 1000)
 })
 burgerBtn.addEventListener("click", showLinks);
-closeBtn.addEventListener("click", hideLinks);
+scrollLink.addEventListener('click', () => {
+    window.scrollTo(0,0)
+})
+  AOS.init();

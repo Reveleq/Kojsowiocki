@@ -481,9 +481,24 @@ body {
       padding-top: 1em;
     }
     &-link {
-      &-img {
-        transition: url 0.3s;
-      }
+        position: relative;
+          &::before{
+            position: absolute;
+            left: 0;
+            width: 0;
+            bottom: -.3rem;
+            height: .2rem;
+            background-color: $light;
+            transition: width .3s;
+            content: '';
+          }
+          &:hover{
+            &::before{
+width: 100%;
+            }
+          }
+      
+      
     }
     &-year {
       margin-top: 1em;
@@ -523,7 +538,7 @@ body {
   transition: background-color 0.3s, transform 0.3s, right 0.4s;
   z-index: 20;
   &:hover {
-    background-color: $light;
+    background-color: $very-dark-red;
   }
  
   &__link {
@@ -533,6 +548,8 @@ body {
     width: 6rem;
     height: 6rem;
     cursor: pointer;
+
+
   }
   &__icon {
     width: 5rem;
@@ -672,11 +689,13 @@ body {
       align-items: flex-start;
       &-link {
         font-size: 1.8rem;
+
       }
     }
     &__down {
       flex-direction: row;
       justify-content: space-around;
+      
       &-producent {
         flex-direction: row;
         justify-content: space-evenly;
@@ -685,6 +704,7 @@ body {
           padding-right: 0.5em;
           font-size: 1.6rem;
         }
+       
       }
       &-year {
         &-text {

@@ -145,7 +145,6 @@ body {
       position: relative;
       top: -8rem;
       height: 60rem;
-      background-image: url("dist/img/header-img-example.jpg");
       background-size: cover;
       background-position: center;
       z-index: 0;
@@ -482,9 +481,6 @@ body {
       padding-top: 1em;
     }
     &-link {
-      :hover {
-        content: url("dist/img/facebook-dark.svg");
-      }
       &-img {
         transition: url 0.3s;
       }
@@ -529,11 +525,7 @@ body {
   &:hover {
     background-color: $light;
   }
-  &:hover {
-    .scroll-up__icon {
-      content: url("dist/img/arrow-up-dark.svg");
-    }
-  }
+ 
   &__link {
     display: flex;
     justify-content: center;

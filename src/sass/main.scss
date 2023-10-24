@@ -145,7 +145,7 @@ body {
       position: relative;
       top: -8rem;
       height: 60rem;
-      background-image: url("/dist/img/header-img-example.jpg");
+      background-image: url("dist/img/header-img-example.jpg");
       background-size: cover;
       background-position: center;
       z-index: 0;
@@ -483,7 +483,7 @@ body {
     }
     &-link {
       :hover {
-        content: url("/dist/img/facebook-dark.svg");
+        content: url("dist/img/facebook-dark.svg");
       }
       &-img {
         transition: url 0.3s;
@@ -531,7 +531,7 @@ body {
   }
   &:hover {
     .scroll-up__icon {
-      content: url("/dist/img/arrow-up-dark.svg");
+      content: url("dist/img/arrow-up-dark.svg");
     }
   }
   &__link {

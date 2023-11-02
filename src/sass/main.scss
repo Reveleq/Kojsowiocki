@@ -158,20 +158,16 @@ body {
       background-position: center;
       z-index: 0;
     }
-    &__text {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      &-img {
-        height: 12em;
-      }
-      &-header {
-        font-weight: 300;
-        color: $light;
-      }
-    }
+    // &__text {
+    //   position: relative;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   height: 100%;
+    //   &-img {
+    //     height: 12em;
+    //   }
+    // }
     &__bg {
       position: absolute;
       width: 100%;

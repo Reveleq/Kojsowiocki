@@ -58,5 +58,5 @@ scrollbtn.addEventListener("click", () => {
 });
 burgerBtn.addEventListener("click", showLinks);
 scrollLink.addEventListener("click", () => {
-  window.scrollTo(0, 0);
+ setTimeout( () => window.scrollTo(0, 0), 50)
 });

@@ -232,6 +232,7 @@ body {
     padding-bottom: 1em;
     margin: 0 auto;
     width: 21rem;
+    text-align: justify;
     font-size: 1.6rem;
   }
 }
@@ -288,23 +289,23 @@ body {
 
 .timeline {
   &-first {
-    margin-left: 5em;
+    margin-left: 10em;
     top: 1em;
   }
   &-second {
-    margin-right: 5em;
+    margin-right: 13em;
     top: 4em;
   }
   &-third {
-    margin-left: 5em;
+    margin-left: 16em;
     top: 7em;
   }
   &-fourth {
-    margin-right: 5em;
+    margin-right: 16em;
     top: 10em;
   }
   &-fifth {
-    margin-left: 5em;
+    margin-left: 10em;
     top: 13em;
   }
 }
@@ -651,6 +652,9 @@ width: 100%;
     &__box {
       width: 27rem;
     }
+    &__text{
+      height: 25rem;
+    }
   }
   .history {
     &__box {
@@ -691,7 +695,9 @@ width: 100%;
       width: 26rem;
     }
     &__text {
-      font-size: 1.8rem;
+      padding-top: 3rem;
+      font-size: 1.7rem;
+      height: 25rem;
     }
   }
   .header {
@@ -703,6 +709,7 @@ width: 100%;
     }
     &__text {
       width: 40rem;
+      font-size: 1.7rem;
     }
   }
   .news {

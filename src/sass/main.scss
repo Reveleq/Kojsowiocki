@@ -7,7 +7,6 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -244,16 +243,15 @@ body {
     position: relative;
     padding-bottom: 1em;
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     background-color: $red;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
   &__text {
     display: block;
-    padding: 1em 0;
+    padding: 1em 2em;
     margin: 0 auto;
-    width: 21rem;
     color: $light;
     font-size: 1.6rem;
   }
@@ -287,22 +285,33 @@ body {
   &-first {
     margin-left: 10em;
     top: 1em;
+    width: 13rem;
   }
   &-second {
-    margin-right: 13em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 9em;
     top: 4em;
+    width: 9rem;
   }
   &-third {
-    margin-left: 16em;
+    margin-left: 10em;
     top: 7em;
+    width: 13rem;
   }
   &-fourth {
-    margin-right: 16em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 9em;
     top: 10em;
+    width: 9rem;
   }
   &-fifth {
-    margin-left: 10em;
+    margin-left: 8em;
     top: 13em;
+    width: 9rem;
   }
 }
 
@@ -357,6 +366,7 @@ body {
       text-decoration: none;
       color: $light;
       background-color: $dark-red;
+      border-radius: 5px;
       transition: background-color 0.3s;
       &:hover {
         background-color: $dark;
@@ -646,17 +656,16 @@ width: 100%;
 @media (min-width: 375px) {
   .about-us {
     &__box {
-      width: 27rem;
+      width: 80%;
+    }
+    &__img{
+      width: 80%;
     }
     &__text{
-      height: 25rem;
+      width: 80%;
     }
   }
-  .history {
-    &__box {
-      width: 27rem;
-    }
-  }
+  
 }
 @media (min-width: 768px) {
   .header {
@@ -682,18 +691,21 @@ width: 100%;
   .about-us {
     &__box {
       flex-direction: row;
+      align-items: flex-start;
       height: 30rem;
-      width: 60rem;
+      width: 70rem;
     }
 
     &__img {
-      height: 25rem;
-      width: 26rem;
+      margin: 0 2.5em;
+      height: 30rem;
+      
     }
     &__text {
-      padding-top: 3rem;
-      font-size: 1.7rem;
+      margin: 1.2em 2em 0 0;
+      font-size: 1.6rem;
       height: 25rem;
+
     }
   }
   .header {
@@ -701,11 +713,7 @@ width: 100%;
   }
   .history {
     &__box {
-      width: 50rem;
-    }
-    &__text {
-      width: 40rem;
-      font-size: 1.7rem;
+      width: 70rem;
     }
   }
   .news {

@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="9MpzUqkIMS-jz9-zY1V_d3oG7Fus2Cqcg1-xOfjG42Q" />
+    <meta name="description" content="Kojsowiocki - zepsół regionalny kultywujący tradycje górali, działa przy Szkole Podstawowej w Kojszówce">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fd42714340.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="dist/css/main.min.css">
-    <link rel="icon" type="image/x-icon" href="dist/img/Logo white transparent.png">
-    <title>Zespół góralski | Kojsowiocki</title>
+    <link rel="shortcut icon" type="image/x-icon" href="dist/img/Logo black.png">
+    <title>Zespół regionalny | Kojsowiocki</title>
 </head>
 <body>
     <nav class="desktop-nav">
-        <img src="dist/img/Logo white transparent.png" alt="" class="desktop-nav__brand">
-        <a href="#o-nas" class="desktop-nav__link">O nas</a>
-        <a href="#historia" class="desktop-nav__link"> Historia</a>
+        <img src="dist/img/Logo white transparent.png" alt="logo zespołu" class="desktop-nav__brand">
+            <a href="#o-nas" class="desktop-nav__link">O nas</a>
+        <li class="desktop-nav__special-link"><a href="#historia" class="desktop-nav__link desktop-nav__history-link"> Historia</a> 
+            <!-- <i class="fa-solid fa-caret-down desktop-nav__history-link-img" src="/dist/img/triangle (1).svg" alt="ikonka pokazująca rozwijalną nawigacje"></i> -->
+            <!-- <ul class="desktop-nav__special-link-list">
+            <li class="desktop-nav__special-link-li"><a class="desktop-nav__special-link-a" href="#os-czasu">Oś czasu</a></li>
+            <li class="desktop-nav__special-link-li"><a  class="desktop-nav__special-link-a" href="#osiagniecia">Osiągnięcia</a></li> -->
+        </ul>
+    </li>
         <a href="#aktualnosci" class="desktop-nav__link">Aktualności</a>
         <a href="#kontakt" class="desktop-nav__link">Kontakt</a>
     </nav>
@@ -29,27 +38,54 @@
         <div class="mobile-nav__links">
         <a href="#o-nas" class="mobile-nav__link">O nas</a>
         <a href="#historia" class="mobile-nav__link"> Historia</a>
+        <!-- <a href="#os-czasu" class="mobile-nav__link"> Oś czasu</a>
+        <a href="#osiagniecia" class="mobile-nav__link"> Osiągnięcia</a> -->
         <a href="#aktualnosci" class="mobile-nav__link">Aktualności</a>
         <a href="#kontakt" class="mobile-nav__link">Kontakt</a></nav>
         </div>
    
     <header class="header">
         <section class="header-hero">
-            <div class="header-hero__img" style="background-image: url('dist/img/hero-img3 2.jpg')">
+            <div class="header-hero__img" style="background-image: url('dist/img/header-img2.jpg')">
                 <div class="header-hero__bg"></div>
-                <!-- <div class="header-hero__text">
-                    <img src="dist/img/Logo white transparent.png" alt="logo zespołu" class="header-hero__text-img">
-                </div> -->
+                <div class="header-hero__text">
+                    <h1 class="header-hero__text-header">Kojsowiocki</h1>
+                </div>
             </div>
         </section>
     </header>
     <main class="main">
-        <div class="scroll-up "><a class="scroll-up__link"><img src="dist/img/arrow-up.svg" alt="przycisk do przewijania na górę strony" class="scroll-up__icon"></a></div>
+        <div class="scroll-up "><a class="scroll-up__link" href="#"><img src="dist/img/arrow-up.svg" alt="przycisk do przewijania na górę strony" class="scroll-up__icon"></a></div>
+        <div class="header-section first-header"></div>
+        <section class="timetable">
+            <div class="wrapper">
+                <div class="timetable__cards">
+            <div class="timetable__box" >
+
+                <img src="/dist/img/pin.png" class="timetable__pin" alt="przypinka do kartki">
+            <h2 class="header timetable__header">Najbliższy planowany koncert</h2>
+            <p class="timetable__text">07.01.2024 r. w Szkole Podstawowej w Kojszówce godz. 15:00</p>
+            </div>
+            <!-- <div class="timetable__box first-box">
+                <img src="/dist/img/pin.png" class="timetable__pin" alt="przypinka do kartki">
+            <h2 class="header timetable__header">Wkrótce</h2>
+            <img src="/dist/img/trees-4741364_640.png" class="timetable__img" alt="choinka">
+            <p class="timetable__text"></p>
+            </div> -->
+            <div class="timetable__box second-box">
+                <img src="/dist/img/pin.png" class="timetable__pin" alt="przypinka do kartki">
+            <h2 class="header timetable__header">Ostatni grany koncert</h2>
+            <p class="timetable__text">22.12.2023 r. Wiglia w Szkole Podstawowej w Kojszówce</p>
+    
+        </div>
+            </div>
+            </div>
+        </section>
         <div class="header-section"></div>
         <section class="about-us" id="o-nas">
             <h3 class="about-us__header header">O nas</h3>
             <div data-aos="fade-down" class="about-us__box" >
-                <img src="dist/img/history img.jpg" alt="zdjęcie całego zepsołu podczas koncertu w kościele" class="about-us__img">
+                <img src="dist/img/history img.jpg" alt="zdjęcie całego zepsołu podczas koncertu w szkole" class="about-us__img">
                 <p class="about-us__text">
                     Zespół kultywuje tradycje górali zamieszkujących tereny Kojszówki, czyli  kliszczaków i babiogórców. W swoim repertuarze prezentuje przyśpiewki, piosenki ludowe, religijne, patriotyczne, kolędy, taniec oraz przedstawienia o obrzędach i zwyczajach ludowych. 
 Swój repertuar zespół przedstawia nie tylko społeczności szkolnej, rodzicom, mieszkańcom wsi, ale również koncertuje poza granicami gminy i powiatu. Bierze również udział w konkursach i przeglądach.
@@ -60,41 +96,160 @@ Swój repertuar zespół przedstawia nie tylko społeczności szkolnej, rodzicom
         <div class="header-section second-header"></div>
         <section class="history" id="historia">
             <h3 class="history__header header">Historia</h3>
+            <div class="history__time-box">
             <div data-aos="fade-right" class="history__box ">
                <p class="history__text">
                 Zespół regionalny „Kojsowiocki” działa od września 2016 roku przy Izbie Regionalnej znajdującej się w Szkole Podstawowej im. Fryderyka Chopina w Kojszówce i jest kontynuacją innowacji pedagogicznej nauczycielek: Teresy Sikora i Marzeny Wątlikiewicz.
-                Wcześniej działał zespół „Kojszowiacy”, który powstał w wyniku realizacji projektu unijnego przy Ochotniczej Straży Pożarnej w Kojszówce.  Na bazie tego zespołu powstał szkolny zespół „Kojsowiocki” zrzeszający uczniów szkoły w Kojszówce. 
-                Obecnie zespołem opiekuje się Marzena Wątlikiewicz, a kapelę nadal przygotowują Agnieszka Pająk i ks. Grzegorz Stachowski.   
                </p>
             </div>
+            <img src="/dist/img/stare_kojsowiocki-removebg-preview.png" alt="zdjęcie zespołu podczas pierwszego występu" class="history__img">
+        </div>
+        <div class="history__time-box second-time-box">
+            <div data-aos="fade-left" class="history__box ">
+                <p class="history__text">
+                    Wcześniej działał zespół „Kojszowiacy”, który powstał w wyniku realizacji projektu unijnego przy Ochotniczej Straży Pożarnej w Kojszówce.  Na bazie tego zespołu powstał szkolny zespół „Kojsowiocki” zrzeszający uczniów szkoły w Kojszówce. 
+                </p>
+             </div>
+             <img src="/dist/img/kojszowiacy.jpg" alt="zdjęcie starego składu zespołu" class="history__img">
+             </div>
+             <div class="history__time-box">
+             <div data-aos="fade-right" class="history__box ">
+                <p class="history__text">
+                Obecnie zespołem opiekuje się Marzena Wątlikiewicz, a kapelę nadal przygotowują Agnieszka Pająk i ks. Grzegorz Stachowski. 
+                </p>
+             </div>
+             <img src="/dist/img/history-third.jpg" alt="zdjęcie aktualnego składu zespołu" class="history__img">
+             </div>
+            
+             <section id="os-czasu">
+            <h3 class="history__header-timeline header">Wydarzenia w pierwszym roku istnienia zespołu</h3>
+           
             <div  data-aos="fade-left" class="history__timeline">
                 <div class="history__timeline-line"></div>
-<div class="history__timeline-text timeline-first"> <span class="history__timeline-header">20.12.2016</span> <p class="history__timeline-text-p">Pierwszy występ</p></div>
-<div class="history__timeline-text timeline-second"> <span class="history__timeline-header">21.12.2016</span><p class="history__timeline-text-p">koncert w Warszawie</p></div>
-<div class="history__timeline-text timeline-third"> <span class="history__timeline-header">12.01.2017</span><p class="history__timeline-text-p">Gościnny występ w szpitalu</p></div>
-<div class="history__timeline-text timeline-fourth"> <span class="history__timeline-header">03.05.2017</span><p class="history__timeline-text-p">Pierwszy przegląd zespołów</p></div>
-<div class="history__timeline-text timeline-fifth"> <span class="history__timeline-header">23.10.2017</span><p class="history__timeline-text-p">Debiut filmowy</p></p>
+<div class="history__timeline-text timeline-first"> <a href="https://spkojszowka.szkolnastrona.pl/art,56,kojsowiocki-i-kojszowiacy" target="_blank" class="history__timeline-link"><span class="history__timeline-header">20.12.2016</span> <p class="history__timeline-text-p">Pierwszy występ</p></a></div>
+<div class="history__timeline-text timeline-second"> <a href="https://spkojszowka.szkolnastrona.pl/art,60,kojsowiocki-i-kojszowiacy-z-koleda-w-warszawie" target="_blank" class="history__timeline-link"><span class="history__timeline-header">21.12.2016</span><p class="history__timeline-text-p">Koncert w Warszawie</p></a></div>
+<div class="history__timeline-text timeline-third"> <a href="https://spkojszowka.szkolnastrona.pl/index.php?c=article&id=66" target="_blank" class="history__timeline-link"><span class="history__timeline-header">12.01.2017</span><p class="history__timeline-text-p">Gościnny występ w szpitalu</p></a></div>
+<div class="history__timeline-text timeline-fourth"> <a href="https://spkojszowka.szkolnastrona.pl/index.php?c=article&id=71" target="_blank" class="history__timeline-link"><span class="history__timeline-header">23.01.2017</span><p class="history__timeline-text-p">Występ w dniu babci i dziadka</p></a></div>
+<div class="history__timeline-text timeline-fifth"> <a href="https://spkojszowka.szkolnastrona.pl/index.php?c=article&id=82" target="_blank" class="history__timeline-link"> <span class="history__timeline-header">03.05.2017</span><p class="history__timeline-text-p">Udział w przeglądzie zespołów</p></div>
+<div class="history__timeline-text timeline-seventh"> <a href="https://spkojszowka.szkolnastrona.pl/index.php?c=article&id=99" target="_blank" class="history__timeline-link"><span class="history__timeline-header">15.10.2017</span><p class="history__timeline-text-p">Koncert w szkole</p></a></div>
+<div class="history__timeline-text timeline-eighth"> <a href="https://spkojszowka.szkolnastrona.pl/art,100,debiut-filmowy" target="_blank" class="history__timeline-link"> <span class="history__timeline-header">23.10.2017</span><p class="history__timeline-text-p">Debiut filmowy</p></a></div>
+<div class="history__timeline-text timeline-ninth"> <a href="https://spkojszowka.szkolnastrona.pl/art,105,kojsowiocki-i-kojszowiacy-na-senioriadzie" target="_blank" class="history__timeline-link"><span class="history__timeline-header">23.11.2017</span><p class="history__timeline-text-p">Występ na Senioriadzie</p></a></div>
+<div class="history__timeline-text timeline-tenth"> <a href="https://spkojszowka.szkolnastrona.pl/index.php?c=page&id=17&s=1" target="_blank" class="history__timeline-link"><span class="history__timeline-header">22.12.2017</span><p class="history__timeline-text-p">Udział w wigilii szkolnej</p></a></div>
+        
 
             </div>
-        </section>
-
+            </section>
+        <!-- <section class="achievements" id="osiagniecia">
+            <h3 class="achievements__header header">Osiągnięcia</h3>
+            <div class="achievements__cards">
+                <div class="achievements__card">
+                        <div class="achievements__popup p-first">
+                            <button class="achievements__popup-close"><img class="achievements__popup-close-img" src="/dist/img/x.svg"></button>
+                            <div class="achievements__popup-bg"></div>
+                            <img class="achievements__popup-img" src="/dist/img/04.09.2023.jpg"></img>
+                        </div>
+                        <button class="achievements__btn first"><img  class="achievements__img" src="/dist/img/04.09.2023.jpg" alt="statuetka zespołu"></button>
+                        <p class="achievements__text">3 miejsce w Krakowie</p>
+                </div>
+                <div class="achievements__card">
+                    <div class="achievements__popup p-first">
+                        <button class="achievements__popup-close"><img class="achievements__popup-close-img" src="/dist/img/x.svg"></button>
+                        <div class="achievements__popup-bg"></div>
+                        <img class="achievements__popup-img" src="/dist/img/04.09.2023.jpg"></img>
+                    </div>
+                    <button class="achievements__btn first"><img  class="achievements__img" src="/dist/img/04.09.2023.jpg" alt="statuetka zespołu"></button>
+                    <p class="achievements__text">3 miejsce w Krakowie</p>
+            </div>
+            <div class="achievements__card">
+                <div class="achievements__popup p-first">
+                    <button class="achievements__popup-close"><img class="achievements__popup-close-img" src="/dist/img/x.svg"></button>
+                    <div class="achievements__popup-bg"></div>
+                    <img class="achievements__popup-img" src="/dist/img/04.09.2023.jpg"></img>
+                </div>
+                <button class="achievements__btn first"><img  class="achievements__img" src="/dist/img/04.09.2023.jpg" alt="statuetka zespołu"></button>
+                <p class="achievements__text">3 miejsce w Krakowie</p>
+        </div>
+        <div class="achievements__card">
+            <div class="achievements__popup p-first">
+                <button class="achievements__popup-close"><img class="achievements__popup-close-img" src="/dist/img/x.svg"></button>
+                <div class="achievements__popup-bg"></div>
+                <img class="achievements__popup-img" src="/dist/img/04.09.2023.jpg"></img>
+            </div>
+            <button class="achievements__btn first"><img  class="achievements__img" src="/dist/img/04.09.2023.jpg" alt="statuetka zespołu"></button>
+            <p class="achievements__text">3 miejsce w Krakowie</p>
+    </div>
+            </div>
+        </section> -->
+</section>
         <div class="header-section"></div>
         <section class="news" id="aktualnosci">
             <h3 class="news__header header">Aktualności</h3>
-<div class="news__cards">
-    <div class="news__card"><h4 class="news__card-header">25.10.2023 r.</h4><img src="dist/img/25.10.2023.jpg" alt="zdjęcie zespołu z koncertu w szkole" class="news__card-img">
+            <button class="news__expand-btn">Rozwiń <i class="fa-solid fa-chevron-down"></i></button>
+<a class=" news__expand-btn news__unexpand-link" href="#aktualnosci">Zwiń <i class="fa-solid fa-chevron-up"></i></a>
+<div class="news__cards news-slick slick">
+    <div class="news__card"><h4 class="news__card-header">20.12.2023 r.</h4><img src="dist/img/20.12.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+        <p class="news__card-text">20 grudnia kolędowaliśmy w Zakładzie Opieki Długoterminowej Szpitala Specjalistycznego im Ludwika Rydygiera w Makowie Podhalańskim </p>
+    <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02KRZr26K9J3mayhB7AKdqoDDqiUhoTyjcmDCyJgaKyfrp35yZVS13JfDmhxCWqTvGl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+    <div class="news__card"><h4 class="news__card-header">14.12.2023 r.</h4><img src="dist/img/14.12.2023.2.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+        <p class="news__card-text">14 grudnia, Kojsowiocki wspólnie z innymi zespołami regionalnymi z naszej gminy, kolędowali w Makowskim Centrum Kultury</p>
+    <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid035brMLSRjpdjLWZSvn2tGnRxd39f9khJizJXWiCFJxEmix9vqo8UKdfkizcvhN3hbl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+  <div class="news__card"><h4 class="news__card-header">03.12.2023 r.</h4><img src="dist/img/3.12.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+        <p class="news__card-text">Rozpoczęliśmy tegoroczne kolędowanie! W dniu dzisiejszym, tj. 03.12.2023 r., uświetniliśmy swoim występem Makowski Jarmark Bożonarodzeniowy.</p>
+    <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0AJyu9EDtwqTjQ9JVReqUvsdKQVfcLoatmkmYWKePWxzpkZLEkvhNLMntDfg7epnhl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+  <div class="news__card"><h4 class="news__card-header">11.11.2023 r.</h4><img src="dist/img/11.11.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+        <p class="news__card-text">11 listopada, podczas Koncertu Finałowego XV Festiwslu Pieśni Patriotycznych w Suchej Beskidzkiej Kojsowiocki odebrały nagrodę za zajęcie III miejsca.</p>
+    <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0MQDb7bLjNcC3fevhCJDdcdPJTqQUxz9D7SvqNZxamKyftY92TMeUfhhhufMUu5Dxl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+    <div class="news__card"><h4 class="news__card-header">10.11.2023 r.</h4><img src="dist/img/10.11.2023-2.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+        <p class="news__card-text"> Występ zespołu Kojsowiocki w Makowskim Centrum Kultury podczas Koncertu Pieśni Patriotycznych.</p>
+    <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0AYHxE8kUrrm1FNjc6WzJPbd7UYogu9QpXvqBbccfDyqa2NQ1XM6XJCUnvXBERrR2l&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+    <div class="news__card"><h4 class="news__card-header">10.11.2023 r.</h4><img src="dist/img/10.11.2023.jpg" alt="zdjęcie zespołu z koncertu w" class="news__card-img">
+        <p class="news__card-text">10.11.2023 roku Kojsowiocki wzięli udział w uroczystości szkolnej „Zaśpiewajmy Niepodległej z Seniorami”</p>
+    <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02dgLX7xr221N8wFoYXwF51Hh7rz4h496n9nsKrtruBVeno4ARFUEYvLEgUnwGz2gql&id=100063025850577" class="news__card-link">Czytaj więcej</a></div>
+    <div class="news__card"><h4 class="news__card-header">25.10.2023 r.</h4><img src="dist/img/25.10.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
     <p class="news__card-text"> 25.10.2023 roku, Kojsowiocki wzięli udział w przesłuchaniach XV Festiwalu Piosenki Patriotycznej w Suchej Beskidzkiej w kategorii zespół.</p>
-<a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0qos7Px57w83YD8PeBm6QPEUHkmLRGpiftqgkSTYBGojra4pwHcPEY2DoMiH7YKWCl&id=100063025850577" class="news__card-link">Czytaj więcej</a></div>
-    <div class="news__card"><h4 class="news__card-header">19.10.2023 r.</h4><img src="dist/img/26.10.2023.jpg" alt="zdjęcie zespołu z koncertu w szkole" class="news__card-img">
+<a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0qos7Px57w83YD8PeBm6QPEUHkmLRGpiftqgkSTYBGojra4pwHcPEY2DoMiH7YKWCl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+    <div class="news__card"><h4 class="news__card-header">19.10.2023 r.</h4><img src="dist/img/26.10.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
     <p class="news__card-text">Kojsowiocki zaśpiewali nauczycielom podczas akademii z okazji Święta Edukacji Narodowej i ślubowania kl. I</p>
-<a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0P2MHZmKx32ZSuKoiEM2rNqeNMFz7mzrijPWo4cbtncv3up1hsuG3ixKSdJdkVUrgl&id=100063025850577" class="news__card-link">Czytaj więcej</a></div>
-    <div class="news__card"><h4 class="news__card-header">04.09 2023 r.</h4><img src="dist/img/04.09.2023.jpg" alt="zdjęcie zespołu z koncertu w szkole" class="news__card-img">
+<a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0P2MHZmKx32ZSuKoiEM2rNqeNMFz7mzrijPWo4cbtncv3up1hsuG3ixKSdJdkVUrgl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+    <div class="news__card"><h4 class="news__card-header">04.09 2023 r.</h4><img src="dist/img/04.09.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
     <p class="news__card-text">Kojsowiocki uczestniczyli we Mszy Świętej rozpoczynającej nowy rok szkolny 2023/2024</p>
-<a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02QWWvZgZ4vo5Mpvv4bb4ARA9fhAp5zQqhEdKR1Yeyuxo9B8DrVTNFDfckvKHLSRa4l&id=100063025850577" class="news__card-link">Czytaj więcej</a></div>
-    <div class="news__card"><h4 class="news__card-header">27.08.2023 r.</h4><img src="dist/img/08.2023.jpg" alt="zdjęcie zespołu z koncertu w szkole" class="news__card-img">
+<a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02QWWvZgZ4vo5Mpvv4bb4ARA9fhAp5zQqhEdKR1Yeyuxo9B8DrVTNFDfckvKHLSRa4l&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+    <div class="news__card"><h4 class="news__card-header">27.08.2023 r.</h4><img src="dist/img/08.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
     <p class="news__card-text">W niedzielę, 27 sierpnia 2023 roku, Kojsowiocki śpiewali Jasnogórskiej Pani podczas mszy odpustowej.</p>
-<a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02B6WBTspdDn9GSiGPxgzkn2GBFS1DKHBP6XG4sU9PScZuato1t19g1xai5ZY6B2BQl&id=100063025850577" class="news__card-link">Czytaj więcej</a></div>
+<a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02B6WBTspdDn9GSiGPxgzkn2GBFS1DKHBP6XG4sU9PScZuato1t19g1xai5ZY6B2BQl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
 </div>
+<div class="news__cards news-expanded">
+    <div class="news__card news-expanded__card"><h4 class="news__card-header">20.12.2023 r.</h4><img src="dist/img/20.12.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+        <p class="news__card-text">20 grudnia kolędowaliśmy w Zakładzie Opieki Długoterminowej Szpitala Specjalistycznego im Ludwika Rydygiera w Makowie Podhalańskim </p>
+    <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02KRZr26K9J3mayhB7AKdqoDDqiUhoTyjcmDCyJgaKyfrp35yZVS13JfDmhxCWqTvGl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+    <div class="news__card news-expanded__card"><h4 class="news__card-header">14.12.2023 r.</h4><img src="dist/img/14.12.2023.2.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+        <p class="news__card-text">14 grudnia, Kojsowiocki wspólnie z innymi zespołami regionalnymi z naszej gminy, kolędowali w Makowskim Centrum Kultury</p>
+    <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid035brMLSRjpdjLWZSvn2tGnRxd39f9khJizJXWiCFJxEmix9vqo8UKdfkizcvhN3hbl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+    <div class="news__card news-expanded__card"><h4 class="news__card-header">03.12.2023 r.</h4><img src="dist/img/3.12.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+          <p class="news__card-text">Rozpoczęliśmy tegoroczne kolędowanie! W dniu dzisiejszym, tj. 03.12.2023 r., uświetniliśmy swoim występem Makowski Jarmark Bożonarodzeniowy.</p>
+      <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0AJyu9EDtwqTjQ9JVReqUvsdKQVfcLoatmkmYWKePWxzpkZLEkvhNLMntDfg7epnhl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+    <div class="news__card news-expanded__card"><h4 class="news__card-header">11.11.2023 r.</h4><img src="dist/img/11.11.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+          <p class="news__card-text">11 listopada, podczas Koncertu Finałowego XV Festiwslu Pieśni Patriotycznych w Suchej Beskidzkiej Kojsowiocki odebrały nagrodę za zajęcie III miejsca.</p>
+      <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0MQDb7bLjNcC3fevhCJDdcdPJTqQUxz9D7SvqNZxamKyftY92TMeUfhhhufMUu5Dxl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+      <div class="news__card news-expanded__card"><h4 class="news__card-header">10.11.2023 r.</h4><img src="dist/img/10.11.2023-2.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+          <p class="news__card-text"> Występ zespołu Kojsowiocki w Makowskim Centrum Kultury podczas Koncertu Pieśni Patriotycznych.</p>
+      <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0AYHxE8kUrrm1FNjc6WzJPbd7UYogu9QpXvqBbccfDyqa2NQ1XM6XJCUnvXBERrR2l&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+      <div class="news__card news-expanded__card"><h4 class="news__card-header">10.11.2023 r.</h4><img src="dist/img/10.11.2023.jpg" alt="zdjęcie zespołu z koncertu w" class="news__card-img">
+          <p class="news__card-text">10.11.2023 roku Kojsowiocki wzięli udział w uroczystości szkolnej „Zaśpiewajmy Niepodległej z Seniorami”</p>
+      <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02dgLX7xr221N8wFoYXwF51Hh7rz4h496n9nsKrtruBVeno4ARFUEYvLEgUnwGz2gql&id=100063025850577" class="news__card-link">Czytaj więcej</a></div>
+      <div class="news__card news-expanded__card"><h4 class="news__card-header">25.10.2023 r.</h4><img src="dist/img/25.10.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+      <p class="news__card-text"> 25.10.2023 roku, Kojsowiocki wzięli udział w przesłuchaniach XV Festiwalu Piosenki Patriotycznej w Suchej Beskidzkiej w kategorii zespół.</p>
+  <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0qos7Px57w83YD8PeBm6QPEUHkmLRGpiftqgkSTYBGojra4pwHcPEY2DoMiH7YKWCl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+      <div class="news__card news-expanded__card"><h4 class="news__card-header">19.10.2023 r.</h4><img src="dist/img/26.10.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+      <p class="news__card-text">Kojsowiocki zaśpiewali nauczycielom podczas akademii z okazji Święta Edukacji Narodowej i ślubowania kl. I</p>
+  <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0P2MHZmKx32ZSuKoiEM2rNqeNMFz7mzrijPWo4cbtncv3up1hsuG3ixKSdJdkVUrgl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+      <div class="news__card news-expanded__card"><h4 class="news__card-header">04.09 2023 r.</h4><img src="dist/img/04.09.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+      <p class="news__card-text">Kojsowiocki uczestniczyli we Mszy Świętej rozpoczynającej nowy rok szkolny 2023/2024</p>
+  <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02QWWvZgZ4vo5Mpvv4bb4ARA9fhAp5zQqhEdKR1Yeyuxo9B8DrVTNFDfckvKHLSRa4l&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+      <div class="news__card news-expanded__card"><h4 class="news__card-header">27.08.2023 r.</h4><img src="dist/img/08.2023.jpg" alt="zdjęcie zespołu z koncertu" class="news__card-img">
+      <p class="news__card-text">W niedzielę, 27 sierpnia 2023 roku, Kojsowiocki śpiewali Jasnogórskiej Pani podczas mszy odpustowej.</p>
+  <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02B6WBTspdDn9GSiGPxgzkn2GBFS1DKHBP6XG4sU9PScZuato1t19g1xai5ZY6B2BQl&id=100063025850577" target="_blank" class="news__card-link">Czytaj więcej</a></div>
+      </div>
 <a class="news__more-btn" href="https://www.facebook.com/profile.php?id=100063025850577" target="_blank">Wszystkie aktualności</a>
         </section>
                 <div class="header-section second-header"></div>
@@ -102,9 +257,9 @@ Swój repertuar zespół przedstawia nie tylko społeczności szkolnej, rodzicom
 <h3 class="contact__header header">Kontakt</h3>
 <div data-aos="fade-up" class="contact__box">
     <div class="contact__center-box">
-    <div class="contact__paragraph"><img src="dist/img/phone (1).svg" alt="" class="contact__paragraph-icon"><p class="contact__paragraph-text">Telefon: 33 877 11 55</p></div>
-    <div class="contact__paragraph"><img src="dist/img/mail.svg" alt="" class="contact__paragraph-icon"><p class="contact__paragraph-text"> E-Mail: kojsowiocki@gmail.com</p></div>
-    <div class="contact__paragraph"><img src="dist/img/map-pin.svg" alt="" class="contact__paragraph-icon"><p class="contact__paragraph-text">Adres: 34-231 Kojszówka 154</p></div>
+    <div class="contact__paragraph"><img src="dist/img/phone (1).svg"  class="contact__paragraph-icon" alt="ikonka telefonu"><p class="contact__paragraph-text">Telefon: 33 877 11 55</p></div>
+    <div class="contact__paragraph"><img src="dist/img/mail.svg" class="contact__paragraph-icon" alt="ikonka koperty"><p class="contact__paragraph-text"> E-Mail: kontakt@kojsowiocki.ct8.pl</p></div>
+    <div class="contact__paragraph"><img src="dist/img/map-pin.svg" class="contact__paragraph-icon" alt="ikonka pineski"><p class="contact__paragraph-text">Adres: 34-231 Kojszówka 154</p></div>
 </div>
 </div>
 </section>
@@ -113,7 +268,7 @@ Swój repertuar zespół przedstawia nie tylko społeczności szkolnej, rodzicom
 <footer class="footer">
 <div class="footer__box">
     <div class="footer__brand">
-        <img src="dist/img/Logo white transparent.png" alt="" class="footer__brand-logo">
+        <img src="dist/img/Logo white transparent.png" alt="logo zepsołu" class="footer__brand-logo">
     </div>
     <div class="footer__list">
         <a href="#" class="footer__list-link">Home</a>
@@ -125,7 +280,7 @@ Swój repertuar zespół przedstawia nie tylko społeczności szkolnej, rodzicom
 </div>
 <div class="footer__down">
     <div class="footer__down-links">
-        <a href="https://www.facebook.com/profile.php?id=100063025850577" target="_blank" class="footer__down-link"><img src="dist/img/facebook (1).svg" alt="" class="footer__down-link-img"></a>
+        <a href="https://www.facebook.com/profile.php?id=100063025850577" target="_blank" class="footer__down-link"><img src="dist/img/facebook (1).svg" alt="ikonka facebooka" class="footer__down-link-img"></a>
     </div>
     <div class="footer__down-year"><p class="footer__down-year-text">&copy <span class="footer__down-year-span"></span> Kojsowiocki </p></div>
 <div class="footer__down-producent">

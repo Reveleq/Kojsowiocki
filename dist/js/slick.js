@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.news__cards').slick({
+    $('.slick').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,

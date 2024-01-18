@@ -8,6 +8,15 @@ const scrollbtn = document.querySelector(".scroll-up");
 const scrollLink = document.querySelector(".scroll-up__link");
 const closebtnIcon = document.querySelector(".mobile-nav__close-btn-img");
 const burgerBtnIcon = document.querySelector(".mobile-nav__btn-img");
+const headerText = document.querySelector('.header-hero__text-header')
+const imgBtn = document.querySelectorAll('.achievements__btn')
+const closePopupBtn = document.querySelectorAll('.achievements__popup-close')
+const popupBg = document.querySelectorAll('.achievements__popup-bg')
+const scrollUpBtn = document.querySelector('.scroll-up')
+const expandBtn = document.querySelector('.news__expand-btn')
+const slickBox = document.querySelector('.news-slick')
+const expandedBox = document.querySelector('.news-expanded')
+const unExpandedBtn = document.querySelector('.news__unexpand-link')
 const year = new Date().getFullYear();
 AOS.init();
 yearSpan.textContent = year;
@@ -32,6 +41,7 @@ const showLinks = () => {
   mobileNavLinks.classList.toggle("opacity");
   burgerBtnIcon.classList.toggle("hide");
   closebtnIcon.classList.toggle("active-btn");
+  headerText.classList.toggle('hide-opacity')
   setTimeout(() => {
     mobileNavLinks.classList.toggle("slide");
   }, 1);
@@ -56,7 +66,57 @@ scrollbtn.addEventListener("click", () => {
     scrollbtn.classList.remove("rotate");
   }, 1000);
 });
+imgBtn.forEach( e => {
+  e.addEventListener('click', () => {
+      e.previousElementSibling.classList.remove('animation-hide')
+      e.previousElementSibling.classList.add('active-popup')
+e.previousElementSibling.classList.add('animation-show')
+scrollUpBtn.classList.remove('active-btn')
+
+  })
+})
+closePopupBtn.forEach( e => {
+  e.addEventListener('click', () => {
+      e.parentElement.classList.add('animation-hide')
+      e.parentElement.classList.remove('animation-show')
+      setTimeout( () => {
+  e.parentElement.classList.remove('active-popup')
+  scrollUpBtn.classList.add('active-btn')
+  } , 501)
+
+
+
+  })
+})
+popupBg.forEach(e => {
+    e.addEventListener('click', () => {
+      e.parentElement.classList.add('animation-hide')
+      e.parentElement.classList.remove('animation-show')
+      setTimeout( () => {
+  e.parentElement.classList.remove('active-popup')
+  } , 501)
+  })
+})
+const removeSlick = () => {
+  slickBox.classList.add('animation-hide')
+  expandBtn.classList.add('animation-hide')
+setTimeout(() => {
+  slickBox.classList.add('hide')
+  slickBox.classList.remove('slick')
+  expandedBox.classList.add('active')
+  expandedBox.classList.add('animation-show')
+  unExpandedBtn.classList.add('active-btn')
+  unExpandedBtn.classList.add('animation-show')
+  expandBtn.classList.add('hide')
+}, 501);
+}
+
 burgerBtn.addEventListener("click", showLinks);
 scrollLink.addEventListener("click", () => {
  setTimeout( () => window.scrollTo(0, 0), 50)
 });
+expandBtn.addEventListener('click', removeSlick)
+unExpandedBtn.addEventListener('click', () => {
+  location.reload()
+  setTimeout(scrollLink)
+})
